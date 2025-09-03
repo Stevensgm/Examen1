@@ -62,7 +62,7 @@ public boolean devolver() {
     }
 }
 
-        public void imprimitir() {
+        public void imprimir() {
             System.out.println("Título: " + titulo);
             System.out.println("Autor: " + autor);
             System.out.println("Número de ejemplares: " + numeroEjemplares);
