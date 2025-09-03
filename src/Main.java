@@ -1,33 +1,30 @@
-public class main {
+public class Main {
     public static void main(String[] args) {
-        Libro libro1 = new Libro("detras del ultimo no hay nadie", "steven", 5, 6);
-        Libro libro2 = new Libro("la ultima patada del mocho", "carlos", 3 , 1);
+        Libro libro1 = new Libro("detras del ultimo no hay nadie", "steven", 5, 12);
+        Libro libro2 = new Libro("la ultima patada del mocho", "carlos", 3, 0);
 
-        // como fue profe Préstamo de libros
-        if (libro1.prestar()) {
-            System.out.println("Préstamo de (detras del ultimo no hay nadie) realizado con éxito.");
-        } else {
-            System.out.println("No hay ejemplares disponibles para prestar de (detras del ultimo no hay nadie.)");
-        }
+      
+        System.out.println("Información inicial de los libros:");
+        libro1.imprimir();
+        libro2.imprimir();
 
-        if (libro2.prestar()) {
-            System.out.println("Préstamo de (la ultima patada del mocho) realizado con éxito.");
-        } else {
-            System.out.println("No hay ejemplares disponibles para prestar de (la ultima patada del mocho.)");
-        }
+        System.out.println("\nIntentando prestar libros:");
+        libro1.prestar();
+        libro2.prestar();
 
-        // que mas profe (devolver libros)
-        if (libro1.devolver()) {
-            System.out.println("Devolución de (detras del ultimo no hay nadie) realizada con éxito.");
-        } else {
-            System.out.println("No hay ejemplares prestados para devolver de (detras del ultimo no hay nadie.)");
-        }
+        
+        System.out.println("\nInformación después de prestar:");
+        libro1.imprimir();
+        libro2.imprimir();
 
-        if (libro2.devolver()) {
-            System.out.println("Devolución de (la ultima patada del mocho) realizada con éxito.");
-        } else {
-            System.out.println("No hay ejemplares prestados para devolver de (la ultima patada del mocho.");
-        }
+        // Devolver libros
+        System.out.println("\nIntentando devolver libros:");
+        libro1.devolver();
+        libro2.devolver();
+
+   
+        System.out.println("\nInformación final de los libros:");
+        libro1.imprimir();
+        libro2.imprimir();
     }
-    
 }
